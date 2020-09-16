@@ -5,11 +5,8 @@
 }
 
 body {
-    background-image: linear-gradient(
-        0deg,
-        rgba(247, 247, 247, 1) 23.8%,
-        rgba(252, 221, 221, 1) 92%
-    );
+    background-image: url('images/bg.jpg');
+    background-size: cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -20,9 +17,9 @@ body {
 }
 
 .music-container {
-    background-color: #fff;
+    background-color: #121212;
     border-radius: 15px;
-    box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.6);
     display: flex;
     padding: 20px 30px;
     position: relative;
@@ -37,7 +34,7 @@ body {
 
 .img-container::after {
     content: '';
-    background-color: #fff;
+    background-color: #121212;
     border-radius: 50%;
     position: absolute;
     bottom: 100%;
@@ -81,9 +78,9 @@ body {
 }
 
 .action-btn {
-    background-color: #fff;
+    background-color: transparent;
     border: 0;
-    color: #dfdbdf;
+    color: #222;
     font-size: 20px;
     cursor: pointer;
     padding: 10px;
@@ -91,7 +88,7 @@ body {
 }
 
 .action-btn.action-btn-big{
-    color: #cdc2d0;
+    color: #0093E9;
     font-size: 30px;
 }
 
@@ -100,7 +97,8 @@ body {
 }
 
 .music-info  {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(18, 18, 18, 0.8);
+    color: #0093E9;
     border-radius: 15px 15px 0 0;
     position: absolute;
     top: 0;
@@ -123,7 +121,7 @@ body {
 }
 
 .progress-container {
-    background: #fff;
+    background: #333;
     border-radius: 5px;
     cursor: pointer;
     margin: 10px 0;
@@ -132,9 +130,28 @@ body {
 }
 
 .progress {
-    background-color: #fe8daa;
+    background-color: #0093E9;
     border-radius: 5px;
     height: 100%;
     width: 0%;
     transition: width 0.1s linear;
+}
+
+.music-lyrics {
+    background-color: rgba(18, 18, 18, 0.8);
+    color: #0093E9;
+    border-radius: 0 0 15px 15px;
+    position: absolute;
+    top: 90px;
+    left:20px;
+    opacity: 0;
+    width: calc(100% - 40px);
+    padding: 30px;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    z-index: -15;
+}
+
+.show {
+    opacity: 1;
 }
